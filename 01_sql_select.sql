@@ -67,7 +67,8 @@ WHERE name like "%orto%";
 #
 # 9: Get the cities that has a population below 1000
 #
-
+SELECT * FROM city
+WHERE Population < 1000;
 
 #
 # 10: Get the unique countrycodes from the cities that has a population below 1000
