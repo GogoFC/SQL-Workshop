@@ -47,7 +47,7 @@ WHERE CountryCode="tto"
 #
 #
 
-SELECT distinct district as nm,name as nm from city
+SELECT district as dist,name as nm from city
 where countrycode="arm";
 
 ############### **************************** ^^^^^
@@ -73,9 +73,13 @@ WHERE Population < 1000;
 #
 # 10: Get the unique countrycodes from the cities that has a population below 1000
 #
+SELECT DISTINCT CountryCode FROM city
+WHERE Population < 1000;
 #
 # 11: Get the cities with the countrycode UKR that has more than 1000000 (one million) in population
 #
+SELECT * FROM city
+WHERE CountryCode ="UKR" AND Population > 1000000;
 #
 # 12: Get the cities with a population of below 200 or above 9500000 (9.5 million)
 #
