@@ -108,13 +108,30 @@ where population between 500 and 600
 #
 # 15: What names of the cities are in the same country as the city with a population of 122199 (including the that city itself)
 #
+#select city.name from city
+#join city
+#where city.Population = 122199;
+
+#select * from city;
+#select * from country;
+#select * from city
+#where population >= 122199;
+
+############################33
+select city.*, country.name as city_name from city left join country
+ON city.`CountryCode` = country.`Code`
+where city.`Population` = 122199;
+
+
 
 #
 # 16: What names of the cities are in the same country as the city with a population of 122199 (excluding the that city itself)
 #
+
 #
 # 17: What are the city names in the country where Luanda is capital?
 #
+
 #
 # 18: What are the names of the capital cities in countries in the same region as the city named Yaren
 #
