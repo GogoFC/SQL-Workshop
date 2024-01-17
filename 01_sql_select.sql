@@ -13,6 +13,7 @@
 # Columns: CountryCode, Language, IsOfficial,Percentage
 #
 #
+use world;
 # 1: Get a query to return "Hello World", 123
 # (Hint: 1 row, 2 columns)
 SELECT "hello world" as message , 123 as id;
@@ -20,28 +21,54 @@ SELECT "hello world" as message , 123 as id;
 # 2: Get everything from the city table
 # (Hint: Many many rows)
 #
+SELECT * from city;
 #
 # 3: Get everything on the cities whose district is "aceh"
 # (Hint: 2 rows)
 #
 #
+SELECT * FROM city
+where District ="aceh";
+
 # 4: Get only the name of the cities where the countrycode is "bfa"
 #
+SELECT * FROM city
+WHERE CountryCode ="bfa";
+
 #
 # 5: Get both the name and district of the cities where the countrycode is "tto"
 #
+
+SELECT Name,District FROM city
+WHERE CountryCode="tto"
+;
 #
 # 6: Get the name and district named as nm,dist from the cities where the countrycode is "arm"
 #
 #
+
+SELECT distinct district as nm,name as nm from city
+where countrycode="arm";
+
+############### **************************** ^^^^^
+
 # 7: Get the cities with a name that starts with "bor"
 #
+
+select * from city 
+where name like "bor%";
+
 #
 # 8: Get the cities with a name that contains the string "orto"
 #
+
+SELECT * FROM city
+WHERE name like "%orto%";
 #
 # 9: Get the cities that has a population below 1000
 #
+
+
 #
 # 10: Get the unique countrycodes from the cities that has a population below 1000
 #
