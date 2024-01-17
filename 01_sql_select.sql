@@ -83,21 +83,41 @@ WHERE CountryCode ="UKR" AND Population > 1000000;
 #
 # 12: Get the cities with a population of below 200 or above 9500000 (9.5 million)
 #
+SELECT * FROM city
+WHERE Population not between 200 and 9500000;
+
 #
 # 13: Get the cities with the countrycodes TJK, MRT, AND, PNG, SJM
 #
+SELECT * FROM city
+WHERE CountryCode IN ("TJK","MRT","AND","PNG","SJM");
+
 #
 # 14: Get the cities with a population between 200 and 700 inclusive
 #
+SELECT * FROM city
+WHERE Population between 200 and 700;
+
 #
 # 15: Get the countries with a population between 8000 and 20000 inclusive
 #
+SELECT * FROM country
+WHERE Population between 8000 AND 20000;
+
 #
 # 16: Get the name of the countries with a independence year (indepyear) before year 0
 #
+select * from country
+where indepyear < 0;
+
 #
 # 17: Get the countries that has no recorded independence year and a population above 1000000
 #
+select * from country
+where indepyear is null and population > 1000000;
+
 #
 # 18: Get countries with a SurfaceArea below 10 and a defined LifeExpectancy
 #
+select * from country
+where surfacearea < 10 and LifeExpectancy is not null;
