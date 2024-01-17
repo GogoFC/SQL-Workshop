@@ -118,7 +118,8 @@ where population between 500 and 600
 #where population >= 122199;
 
 ############################33
-select city.*, country.name as city_name from city left join country
+select city.*, country.name as city_name from city 
+left join country
 ON city.`CountryCode` = country.`Code`
 where city.`Population` = 122199;
 
@@ -131,7 +132,8 @@ where city.`Population` = 122199;
 #
 # 17: What are the city names in the country where Luanda is capital?
 #
-
+select * from city where CountryCode=(
+select CountryCode from city where `Name`="Luanda");
 #
 # 18: What are the names of the capital cities in countries in the same region as the city named Yaren
 #
